@@ -10,21 +10,21 @@ const testimonialsData = [
     customerName: "John Watkins",
     customerTitle: "Founder of Dashflow",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "Las herramientas anal ticas poderosas nos han ayudado a simplificar nuestros procesos y a tomar decisiones basadas en datos que tienen un impacto positivo en nuestra eficiencia. Tailcast ha sido un cambio de juego para nuestro negocio. La plataforma es f cil de usar, y los conocimientos que hemos obtenido han llevado a mejoras significativas.",
     image: testimonial1,
   },
   {
     customerName: "John Watkins",
     customerTitle: "Founder of Dashflow",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "Las herramientas anal ticas poderosas nos han ayudado a simplificar nuestros procesos y a tomar decisiones basadas en datos que tienen un impacto positivo en nuestra eficiencia. Tailcast ha sido un cambio de juego para nuestro negocio. La plataforma es f cil de usar, y los conocimientos que hemos obtenido han llevado a mejoras significativas.",
     image: testimonial2,
   },
   {
     customerName: "John Watkins",
     customerTitle: "Founder of Dashflow",
     content:
-      "The powerful analytic tools have helped us streamline our processes and make data-driven decisions that positively impact our efficiency. Tailcast has been a game-changer for our business. The platform is easy to use, and the insights we've gained have driven significant improvements.",
+      "Las herramientas anal ticas poderosas nos han ayudado a simplificar nuestros procesos y a tomar decisiones basadas en datos que tienen un impacto positivo en nuestra eficiencia. Tailcast ha sido un cambio de juego para nuestro negocio. La plataforma es f cil de usar, y los conocimientos que hemos obtenido han llevado a mejoras significativas.",
     image: testimonial3,
   },
 ];

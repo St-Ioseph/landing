@@ -3,10 +3,10 @@
   "type": "module",
   "version": "1.0.2",
   "license": "MIT",
-  "description": "Dark themed website template built on AstroJS, designed for fictional startup",
+  "description": "ioseph.dev company website",
   "author": {
-    "name": "Mateusz Wyrębek (matt765)",
-    "email": "mateusz.wyrebek@gmail.com",
+    "name": "Ioseph Dev",
+    "email": "ioseph.dev@gmail.com",
     "url": "https://matt765-portfolio.vercel.app/"
   },
   "private": true,
