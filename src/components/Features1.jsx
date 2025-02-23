@@ -21,25 +21,29 @@ export const Features1 = () => {
         <div className="flex flex-wrap items-center 2xl:w-[1450px] xl:w-[1300px] w-11/12 mx-auto md:pl-4 xl:pr-16 xl:pl-16">
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-              <span className="block-subtitle">Adopta la Innovación</span>
+              <span className="block-subtitle">
+                Impulsa tu negocio con tecnología a medida."
+              </span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Adopta la Innovación
+                Soluciones web innovadoras para tu empresa
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
-                Descubre un nuevo nivel de análisis de datos con nuestra plataforma innovadora.
+                Desarrollamos sistemas de gestión y plataformas web
+                personalizadas con analíticas avanzadas para optimizar tu
+                operación.
               </p>
               <ul className="mb-6 text-primaryText">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Visualización de datos en tiempo real</span>
+                  <span>Paneles de control intuitivos y dinámicos.</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Análisis predictivo avanzado</span>
+                  <span>Reportes y analíticas personalizadas.</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Integración perfecta con APIs</span>
+                  <span>Automatización y optimización de procesos.</span>
                 </li>
               </ul>
             </div>

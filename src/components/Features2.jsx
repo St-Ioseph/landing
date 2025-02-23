@@ -34,25 +34,30 @@ export const Features2 = () => (
 
         <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-            <span className="block-subtitle">Toma Decisiones Basadas en Datos</span>
+            <span className="block-subtitle">
+              Convierte tus datos en información accionable para hacer crecer tu
+              negocio.
+            </span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Seguimiento de problemas que disfrutarás usar
+              Toma decisiones con información precisa
             </h2>
             <p className="mb-12 text-secondaryText leading-loose">
-              Monitorea y rastrea problemas de datos con facilidad usando nuestro sistema de seguimiento de problemas intuitivo y eficiente. Mantente adelantado a posibles problemas y mejora tu flujo de trabajo.
+              Accede a datos clave en tiempo real con nuestros sistemas de
+              gestión y analíticas avanzadas. Optimiza tu operación y mejora tu
+              toma de decisiones con herramientas intuitivas.
             </p>
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Entorno colaborativo</span>
+                <span>Paneles de control interactivos.</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Categorización inteligente de problemas</span>
+                <span>Reportes detallados y personalizables.</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Notificaciones personalizables</span>
+                <span>Alertas y notificaciones en tiempo real.</span>
               </li>
             </ul>
           </div>
