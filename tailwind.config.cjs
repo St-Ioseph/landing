@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         primaryColor: "rgb(239,184,16)",
         secondaryColor: "rgb(241,208,40)",
-        hoverColor: "rgb(248,232,150)",
+        hoverColor: "rgb(130, 100, 9)",
         
         // rgb(255, 94, 77)
         // rgb(204, 119, 34)

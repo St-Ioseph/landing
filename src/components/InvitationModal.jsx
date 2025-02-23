@@ -23,24 +23,24 @@ export const InvitationModal = ({ setIsOpen }) => (
           <div className="flex relative">
             <div className="w-1/2 hidden lg:inline">
               <h2 className="mt-6 mb-2 text-5xl font-bold tracking-normal text-primaryText">
-                Suscríbete Ahora
+                Comparte tu correo
               </h2>
               <h2 className="text-5xl font-bold tracking-normal text-secondaryColor">
-                El invierno se acerca
+                Nosotros te contactaremos
               </h2>
 
               <ul className="mb-6 text-primaryText mt-12">
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Vestíbulo viverra</span>
+                  <span>Solución tecnológica a medida</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Morbi mollis metus pretium</span>
+                  <span>Planificación precisa de entregas</span>
                 </li>
                 <li className="mb-4 flex">
                   <CheckArrowIcon />
-                  <span>Etiam lectus nunc, commodo</span>
+                  <span>Mantenimiento y calidad asegurada</span>
                 </li>
               </ul>
             </div>
@@ -55,7 +55,7 @@ export const InvitationModal = ({ setIsOpen }) => (
               </div>
 
               <h3 className="mb-7 text-2xl text-primaryText font-bold leading-snug text-center">
-                Únete a 3,953 otros desarrolladores
+                Únete al impulso de la innovación
               </h3>
               <div className="flex flex-wrap -m-2">
                 <div className="w-full sm:w-4/5 p-2 mx-auto">
