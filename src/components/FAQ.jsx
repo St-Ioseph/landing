@@ -3,24 +3,24 @@ import { motion } from "framer-motion";
 
 const FAQData = [
   {
-    question: "Can I upgrade or downgrade my plan at any time?",
+    question: "¿Puedo actualizar o degradar mi plan en cualquier momento?",
     answer:
-      "Yes, you can easily upgrade or downgrade your plan at any time. Simply navigate to the account settings in your dashboard and choose the desired plan. The changes will be reflected immediately, and any adjustments in pricing will be applied on your next billing cycle. Our support team is more than happy to provide guidance and recommendations.",
+      "Sí, puedes actualizar o degradar tu plan en cualquier momento. Simplemente navega a la configuración de tu cuenta en tu panel de control y selecciona el plan deseado. Los cambios se reflejarán inmediatamente y cualquier ajuste en el precio se aplicará en tu próximo ciclo de facturación. Nuestro equipo de soporte estará encantado de proporcionarte orientación y recomendaciones.",
   },
   {
-    question: "How to claim your 25% discount offer?",
+    question: "¿Cómo reclamo mi oferta de descuento del 25%?",
     answer:
-      "To claim your 25% discount, simply sign up for an account and enter the promotional code at checkout. The discount will be applied automatically to your purchase.",
+      "Para reclamar tu descuento del 25%, simplemente regístrate y usa el código promocional al finalizar la compra. El descuento se aplicará automáticamente a tu compra.",
   },
   {
-    question: "What's your refund policy?",
+    question: "¿Cuál es tu política de reembolso?",
     answer:
-      "We offer a 30-day money-back guarantee on all our plans. If you're not satisfied with our product, simply contact our support team within 30 days of purchase for a full refund.",
+      "Ofrecemos una garantía de devolución de dinero de 30 días en todos nuestros planes. Si no estás satisfecho con nuestro producto, simplemente contacta a nuestro equipo de soporte dentro de los 30 días posteriores a la compra para obtener un reembolso completo.",
   },
   {
-    question: "How to get support for the product?",
+    question: "¿Cómo puedo obtener soporte para el producto?",
     answer:
-      "Our dedicated support team is here to help. You can reach out to us through the contact form on our website, send an email, or engage with us via live chat. We'll be happy to assist you with any questions or concerns you may have",
+      "Nuestro equipo de soporte dedicado está aquí para ayudarte. Puedes contactarnos a través del formulario de contacto en nuestro sitio web, enviar un correo electrónico o interactuar con nosotros a través del chat en vivo. Estaremos encantados de ayudarte con cualquier pregunta o inquietud que tengas",
   },
 ];
 
@@ -35,9 +35,9 @@ export const FAQ = () => (
     >
       <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
         <div className="md:max-w-4xl mx-auto">
-          <p className="mb-7 block-subtitle text-center">Have any questions?</p>
+          <p className="mb-7 block-subtitle text-center">¿Tienes alguna pregunta?</p>
           <h2 className="mb-16 block-big-title text-center">
-            Frequently Asked Questions
+            Preguntas Frecuentes
           </h2>
           <div className="mb-11 flex flex-wrap -m-1">
             {FAQData.map((item, index) => (

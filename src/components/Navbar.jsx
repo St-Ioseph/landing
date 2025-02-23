@@ -5,10 +5,10 @@ import { TailcastLogo } from "../assets/logos/TailcastLogo";
 import { GithubIcon } from "../assets/icons/GithubIcon";
 
 const navbarLinks = [
-  { label: "Home", href: "/#home", ariaLabel: "Home" },
-  { label: "Features", href: "/#features", ariaLabel: "Features" },
-  { label: "Pricing", href: "/#pricing", ariaLabel: "Pricing" },
-  { label: "Feedback", href: "/#feedback", ariaLabel: "Feedback" },
+  { label: "Inicio", href: "/#home", ariaLabel: "Inicio" },
+  { label: "Características", href: "/#features", ariaLabel: "Características" },
+  { label: "Precios", href: "/#pricing", ariaLabel: "Precios" },
+  { label: "Comentarios", href: "/#feedback", ariaLabel: "Comentarios" },
   { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
 ];
 
@@ -18,7 +18,7 @@ export const Navbar = () => {
   return (
     <nav
       className="w-full h-20 flex flex-col justify-center items-center fixed bg-bgDark1 lg:bg-bgDarkTransparent z-40 lg:backdrop-blur-xl"
-      aria-label="Main navigation"
+      aria-label="Navegación principal"
     >
       <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
         <motion.div
@@ -27,7 +27,7 @@ export const Navbar = () => {
           transition={{ duration: 0.3 }}
           exit={{ opacity: 0 }}
         >
-          <a href="/#home" aria-label="Home">
+          <a href="/#home" aria-label="Inicio">
             <div className="flex justify-start items-center grow basis-0">
               <div className="text-white mr-2 text-6xl">
                 <TailcastLogo />
@@ -69,10 +69,10 @@ export const Navbar = () => {
            bg-bgDark2 hover:bg-bgDark3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
               href="https://github.com/matt765/Tidestream"
               target="_blank"
-              aria-label="source code"
+              aria-label="código fuente"
             >
               <GithubIcon />
-              <span className="pt-px">Source code</span>
+              <span className="pt-px">Código fuente</span>
             </a>
           </div>
         </motion.div>
@@ -116,7 +116,7 @@ export const Navbar = () => {
                 target="_blank"
               >
                 <GithubIcon />
-                Source code
+                Código fuente
               </a>
             </div>
           </motion.div>

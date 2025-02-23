@@ -18,14 +18,14 @@ export const Features2 = () => (
             <div className="mb-4 py-3 md:pl-3 md:pr-20 lg:pr-12 rounded">
               <img
                 src={feature5.src}
-                alt="Feature image 5"
+                alt="Imagen de característica 5"
                 className="rounded-xl  main-border-gray"
               />
             </div>
             <div className="py-3 md:pl-20 lg:pl-12 md:pr-2 rounded ">
               <img
                 src={feature6.src}
-                alt="Feature image 6"
+                alt="Imagen de característica 6"
                 className="rounded-xl  main-border-gray"
               />
             </div>
@@ -34,27 +34,25 @@ export const Features2 = () => (
 
         <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
-            <span className="block-subtitle">Make Data-Driven Decisions</span>
+            <span className="block-subtitle">Toma Decisiones Basadas en Datos</span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Issue tracking you’ll enjoy using
+              Seguimiento de problemas que disfrutarás usar
             </h2>
             <p className="mb-12 text-secondaryText leading-loose">
-              Monitor and track data issues with ease using our intuitive and
-              efficient issue tracking system. Stay ahead of potential problems
-              and improve your workflow.
+              Monitorea y rastrea problemas de datos con facilidad usando nuestro sistema de seguimiento de problemas intuitivo y eficiente. Mantente adelantado a posibles problemas y mejora tu flujo de trabajo.
             </p>
             <ul className="mb-6 text-primaryText">
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Collaborative environment</span>
+                <span>Entorno colaborativo</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Smart issue categorization</span>
+                <span>Categorización inteligente de problemas</span>
               </li>
               <li className="mb-4 flex">
                 <CheckArrowIcon />
-                <span>Customizable notifications</span>
+                <span>Notificaciones personalizables</span>
               </li>
             </ul>
           </div>
