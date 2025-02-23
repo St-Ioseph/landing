@@ -32,7 +32,7 @@ export const Footer = () => {
         <div className="container mx-auto px-4 w-4/5 md:w-11/12 lg:w-10/12 xl:w-4/5 2xl:w-2/3">
           <div className="flex flex-wrap">
             <div className="w-full lg:w-1/3 mb-16 lg:mb-0">
-              <div className="flex justify-center lg:justify-start items-center grow basis-0">
+              <div className="flex justify-center lg:justify-start items-center grow basis-0 mb-10">
                 <div className="text-white mr-2 text-6xl">
                   <IosephLogo />
                 </div>
@@ -40,17 +40,6 @@ export const Footer = () => {
                   Ioseph dev
                 </div>
               </div>
-              <p className="mb-10 mt-4 sm:w-[22rem] lg:w-[20rem] xl:w-[24rem] text-gray-400 leading-loose text-center lg:text-left mx-auto lg:mx-0">
-                Las imágenes del panel de control se crearon utilizando el panel de control de administración oscuro gratuito que puede encontrar
-                <a
-                  href="https://bootstrapious.com/p/bootstrap-4-dark-admin"
-                  target="_blank"
-                  className="text-gray-100 ml-1.5 "
-                  aria-label="Panel de control de administración oscuro"
-                >
-                  aquí.
-                </a>
-              </p>
               <div className="w-36 mx-auto lg:mx-0">
                 <a
                   className="inline-block w-10  h-10 mr-2 p-2 pt-[0.55rem] outlined-button"
