@@ -31,7 +31,7 @@
 /* Buttons */
 
 .contained-button {
-  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-hoverColor cursor-pointer transition;
+  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-hoverColor cursor-pointer transition duration-300 hover:text-bgDark3Hover;
 }
 .outlined-button {
   @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3  border-gray-700 text-sm;
