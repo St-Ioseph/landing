@@ -2,7 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
-import dashboard from "../assets/images/dashboard.jpg";
+import dashboard from "../assets/images/dashboard.png";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -19,7 +19,7 @@ export const Hero = () => {
           transition={{ duration: 0.5 }}
         >
           <h3 className="text-secondaryColor text-sm sm:text-base  mb-6 sm:mt-32 mt-16 font-bold">
-            Digitaliza tu empresa, centraliza tus datos y toma decisiones.
+            Digitaliza tu empresa, centraliza tus datos y toma decisiones
           </h3>
         </motion.div>
         <motion.div
@@ -31,7 +31,7 @@ export const Hero = () => {
             <h1>Soluciones digitales</h1>
           </div>
           <h1 className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-primaryText  px-8 sm:px-20 md:px-24 lg:px-24">
-          para tu empresa.
+          para tu empresa
           </h1>
         </motion.div>
         <motion.div
@@ -61,7 +61,7 @@ export const Hero = () => {
               onClick={() => setIsModalOpen(true)}
               aria-label="Demo en vivo"
             >
-              Demo en vivo
+              Contacto
             </button>
           </div>
         </motion.div>
@@ -74,7 +74,7 @@ export const Hero = () => {
             <img
               src={dashboard.src}
               alt="Imagen de dashboard"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              className="w-4/5 2xl:w-[1000px] mx-auto absolute z-10 rounded-xl main-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>

@@ -2,18 +2,38 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 import { IosephLogo } from "../assets/logos/IosephLogo";
-import { GithubIcon } from "../assets/icons/GithubIcon";
-
-const navbarLinks = [
-  { label: "Inicio", href: "/#home", ariaLabel: "Inicio" },
-  { label: "Características", href: "/#features", ariaLabel: "Características" },
-  { label: "Precios", href: "/#pricing", ariaLabel: "Precios" },
-  { label: "Comentarios", href: "/#feedback", ariaLabel: "Comentarios" },
-  { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
-];
+import { WspIcon } from "../assets/icons/WspIcon";
 
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const navbarLinks = [
+    {
+      label: "Inicio",
+      href: "/#home",
+      ariaLabel: "Inicio",
+      onMobileClick: () => setIsOpen(false),
+      onDesktopClick: undefined,
+    },
+    {
+      label: "Características",
+      href: "/#features",
+      ariaLabel: "Características",
+      onMobileClick: () => setIsOpen(false),
+      onDesktopClick: undefined,
+    },
+    {
+      label: "Contacto",
+      href: "",
+      ariaLabel: "Contacto",
+      onMobileClick: () => setIsOpen(false),
+      onDesktopClick: () => setIsModalOpen(true),
+    },
+    // { label: "Precios", href: "/#pricing", ariaLabel: "Precios" },
+    // { label: "Comentarios", href: "/#feedback", ariaLabel: "Comentarios" },
+    // { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
+  ];
 
   return (
     <nav
@@ -45,16 +65,27 @@ export const Navbar = () => {
           exit={{ opacity: 0 }}
         >
           <div className="hidden lg:flex h-full pl-12 pb-2">
-            {navbarLinks.map(({ href, label, ariaLabel }) => (
-              <a
-                className="text-white lg:text-base text-2xl  leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2"
-                href={href}
-                aria-label={ariaLabel}
-                key={label}
-              >
-                {label}
-              </a>
-            ))}
+            {navbarLinks.map(({ href, label, ariaLabel, onDesktopClick }) =>
+              onDesktopClick ? (
+                <button
+                  key={label}
+                  onClick={onDesktopClick}
+                  className="text-white lg:text-base text-2xl  leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2"
+                >
+                  {label}
+                </button>
+              ) : (
+                <a
+                  className="text-white lg:text-base text-2xl  leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2"
+                  href={href}
+                  aria-label={ariaLabel}
+                  key={label}
+                  onClick={onDesktopClick}
+                >
+                  {label}
+                </a>
+              )
+            )}
           </div>
         </motion.div>
         <motion.div
@@ -67,12 +98,12 @@ export const Navbar = () => {
             <a
               className="text-white main-border-gray rounded-xl
            bg-bgDark2 hover:bg-bgDark3  border-gray-700 pl-6 pr-8 pt-2 pb-2 text-sm flex"
-              href="https://github.com/matt765/Tidestream"
+              href="https://wa.me/+5492613337751?text=Hola, me gustaría que agendáramos una reunión, mi nombre es ."
               target="_blank"
-              aria-label="código fuente"
+              aria-label="numero telefónico"
             >
-              <GithubIcon />
-              <span className="pt-px">Código fuente</span>
+              <WspIcon />
+              <span className="pt-px">WhatsApp</span>
             </a>
           </div>
         </motion.div>
@@ -99,12 +130,12 @@ export const Navbar = () => {
         items-center gap-10 pb-10 border-y border-solid border-bgDark3 pt-10
         "
             >
-              {navbarLinks.map(({ label, href, ariaLabel }) => (
+              {navbarLinks.map(({ label, href, ariaLabel, onMobileClick }) => (
                 <a
                   key={href}
                   className="text-white lg:text-base text-2xl  leading-6 mr-4 ml-4   2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition duration-300 h-full pt-2"
                   href={href}
-                  onClick={() => setIsOpen(false)}
+                  onClick={onMobileClick}
                   aria-label={ariaLabel}
                 >
                   {label}
@@ -112,16 +143,19 @@ export const Navbar = () => {
               ))}
               <a
                 className="outlined-button pl-6 pr-8 pt-2 pb-2  flex"
-                href="https://github.com/matt765/Tidestream"
+                href="https://wa.me/+5492613337751?text=Hola, me gustaría que agendáramos una reunión, mi nombre es ."
                 target="_blank"
               >
-                <GithubIcon />
-                Código fuente
+                <WspIcon />
+                WhatsApp
               </a>
             </div>
           </motion.div>
         )}
       </AnimatePresence>
+      {isModalOpen && (
+        <InvitationModal isOpen={isModalOpen} setIsOpen={setIsModalOpen} />
+      )}
     </nav>
   );
 };

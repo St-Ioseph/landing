@@ -8,17 +8,17 @@ const blogData = [
   {
     title: "IA y Aprendizaje Automático",
     subtitle:
-      "Descubre información y tendencias en el mundo del análisis de datos. Sumérgete en cómo la IA y el aprendizaje automático están revolucionando las industrias",
+      "Descubrí información y tendencias en el mundo del análisis de datos. Sumergite en cómo la IA y el aprendizaje automático están revolucionando las industrias",
     image: blog1.src,
   },
   {
     title: "Análisis de Datos Basados en Datos",
-    subtitle: "Explora el impacto de la IA y el ML en el análisis de datos.",
+    subtitle: "Explorá el impacto de la IA y el ML en el análisis de datos.",
     image: blog2.src,
   },
   {
     title: "Procesamiento de Datos en Tiempo Real",
-    subtitle: "Aprende sobre la importancia del procesamiento en tiempo real.",
+    subtitle: "Aprendé sobre la importancia del procesamiento en tiempo real.",
     image: blog3.src,
   },
 ];
@@ -40,7 +40,7 @@ export const Blog = () => (
               Últimas Ideas
             </h2>
             <p className="mb-6 text-secondaryText">
-              Mantente actualizado con las últimas tendencias e ideas en nuestra industria.
+              Mantenete actualizado con las últimas tendencias e ideas en nuestra industria.
             </p>
           </div>
           <div className="flex 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] flex-wrap -mx-4 items-start h-auto sm:h-[30rem] lg:h-[31rem]  xl:h-[35rem]">

@@ -35,15 +35,15 @@ export const Features2 = () => (
         <div className="w-full lg:w-1/2 mb-12 lg:mb-0 xl:pl-8">
           <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
             <span className="block-subtitle">
-              Convierte tus datos en información accionable para hacer crecer tu
-              negocio.
+              Convertí tus datos en información accionable para hacer crecer tu
+              negocio
             </span>
             <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-              Toma decisiones con información precisa
+              Tomá decisiones con información precisa
             </h2>
             <p className="mb-12 text-secondaryText leading-loose">
               Accede a datos clave en tiempo real con nuestros sistemas de
-              gestión y analíticas avanzadas. Optimiza tu operación y mejora tu
+              gestión y analíticas avanzadas. Optimizá tu operación y mejora tu
               toma de decisiones con herramientas intuitivas.
             </p>
             <ul className="mb-6 text-primaryText">
