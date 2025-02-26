@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
 
