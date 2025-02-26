@@ -4,16 +4,16 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primaryColor: "rgb(239,184,16)",
-        secondaryColor: "rgb(241,208,40)",
-        hoverColor: "rgb(130, 100, 9)",
+        primaryColor: "rgb(239,184,16)", //efb810 - 2
+        secondaryColor: "rgb(241,208,40)", //f1d020 - 3 
+        hoverColor: "rgb(130, 100, 9)",  // 826409 - 1
         
         // rgb(255, 94, 77)
         // rgb(204, 119, 34)
         // rgb(154, 205, 50),
 
         primaryText: "rgb(255,255,255)",
-        secondaryText: "rgb(248,232,150)",
+        secondaryText: "rgb(248,232,150)", //f8e872 - 4
         bgDark1: "rgb(31, 32, 35)",
         bgDark2: "rgb(38, 39, 43)",
         bgDark3: "rgb(48, 49, 54)",
