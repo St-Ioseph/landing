@@ -1,0 +1,18 @@
+---
+import Logo from '../assets/astro.svg';
+import Button from './shared/Button.astro';
+---
+
+
+<section class="flex flex-row items-center justify-between py-4 px-4">
+  <div class="flex flex-row items-center gap-2">
+    <img src={Logo.src} alt="logo" class="h-12 w-auto" />
+    <h1 class="text-3xl font-bold">Ioseph Dev</h1>
+  </div>
+  <nav>
+    <a href="/">Home</a>
+    <a href="/about">About</a>
+    <a href="/contact">Contact</a>
+  </nav>
+  <Button text="Hablemos" href="contact" />
+</section>;
