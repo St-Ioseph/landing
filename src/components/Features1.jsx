@@ -22,10 +22,10 @@ export const Features1 = () => {
           <div className="w-full lg:w-1/2 mb-12 lg:mb-0">
             <div className="mx-auto lg:mx-auto w-11/12 sm:w-4/5 md:w-3/4 lg:w-unset">
               <span className="block-subtitle">
-                Impulsá tu negocio con tecnología a medida
+                Soluciones web innovadoras para tu empresa
               </span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Soluciones web innovadoras para tu empresa
+                Impulsá tu negocio con tecnología a medida
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
                 Desarrollamos sistemas de gestión y plataformas web

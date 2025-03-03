@@ -26,7 +26,7 @@ module.exports = {
         quoteIconColor: "rgb(178, 184, 205)"
       },
       fontFamily: {
-        Inter: "Inter",
+        Roboto: "Roboto",
       },
       screens: {
         xs: "530px",

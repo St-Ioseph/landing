@@ -44,7 +44,7 @@ export const Navbar = () => {
                   <IosephLogo />
                 </div>
                 <div className="text-white font-['Inter'] font-bold text-xl">
-                  Ioseph dev
+                  Ioseph
                 </div>
               </div>
             </a>
