@@ -2,9 +2,12 @@
 import Header from "../components/Header.astro";
 import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
+import LayoutMargin from "../layouts/Layout-x-margin.astro";
 ---
 
 <Layout>
-  <Header />
-  <Welcome />
+  <LayoutMargin>
+    <Header />
+    <Welcome />
+  </LayoutMargin>
 </Layout>

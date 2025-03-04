@@ -1,8 +1,8 @@
 ---
-const { Icon, iconColor, text, href, target } = Astro.props;
+const { Icon, text, href, target } = Astro.props;
 ---
 
-<a href={href} target={target || "_self"} class="btn btn-primary">
-  {Icon && <Icon iconColor={iconColor} />}
+<a href={href} target={target || "_self"} class="btn btn-accent">
+  {Icon && <Icon />}
   {text}
 </a>

@@ -1,27 +1,24 @@
 ---
-// import Logo from '../assets/astro.svg';
+import { WSP_MESSAGE, WSP_NUMBER } from "../constants";
 import WspIcon from "./icons/WspIcon.astro";
 import BtnLink from "./shared/BtnLink.astro";
 const navbarItems = [
-  { href: "/about", text: "About" },
-  { href: "/contact", text: "Services" },
-  { href: "/case-studies", text: "Case Studies" },
-  { href: "/blog", text: "Blog" },
+  { href: "/about", text: "Nosotros" },
+  { href: "/contact", text: "Servicios" },
+  // { href: "/case-studies", text: "Case Studies" },
+  // { href: "/blog", text: "Blog" },
   { href: "/contact", text: "Contact" },
 ];
-const wsp_number = "+5492613337751";
-const msj_text =
-  "Hola, me gustaría que agendáramos una reunión, mi nombre es .";
 ---
 
 <section class="flex p-4 items-center justify-center">
-  <div class="navbar bg-base-100 shadow-sm max-w-[1030px]">
+  <div class="navbar bg-base-100 shadow-sm">
     <div class="flex-1">
       <a href="/" class="btn btn-ghost text-xl">Ioseph</a>
     </div>
     <!-- Desktop Navbar -->
     <div class="flex-none max-lg:hidden">
-      <ul class="menu menu-horizontal px-1 gap-4">
+      <ul class="menu menu-horizontal px-1 gap-4 flex items-center">
         {
           navbarItems.map(({ href, text }) => (
             <li>
@@ -32,9 +29,8 @@ const msj_text =
         <li>
           <BtnLink
             Icon={WspIcon}
-            iconColor="000"
             target="_blank"
-            href={`https://wa.me/${wsp_number}?text=${msj_text}`}
+            href={`https://wa.me/${WSP_NUMBER}?text=${WSP_MESSAGE}`}
             text="Hablemos"
           />
         </li>
@@ -69,8 +65,9 @@ const msj_text =
           }
           <li>
             <BtnLink
+              Icon={WspIcon}
               target="_blank"
-              href=`https://wa.me/${wsp_number}?text=${msj_text}`
+              href={`https://wa.me/${WSP_NUMBER}?text=${WSP_MESSAGE}`}
               text="Hablemos"
             />
           </li>
@@ -78,4 +75,4 @@ const msj_text =
       </details>
     </div>
   </div>
-</section>;
+</section>

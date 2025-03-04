@@ -1,3 +1,73 @@
-<section>
-  <h1>asdasd</h1>
-</section>;
+---
+import { WSP_NUMBER, WSP_MESSAGE } from "../constants";
+import WspIcon from "./icons/WspIcon.astro";
+import BtnLink from "./shared/BtnLink.astro";
+const customersItems = [
+  {
+    testimonial:
+      "Ioseph se convirtió rápidamente en una parte fundamental de nuestro equipo.",
+    image:
+      "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+  },
+  {
+    testimonial:
+      "Los recomendaría ampliamente para cualquiera que busque valor y resultados.",
+    image:
+      "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+  },
+  {
+    testimonial: "Tuvimos una excelente experiencia trabajando con Ioseph.",
+    image:
+      "https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp",
+  },
+];
+---
+
+<section
+  class="flex flex-col lg:flex-row items-center justify-center py-16 p-4 gap-8"
+>
+  <div class="flex flex-col items-start justify-start gap-6">
+    <p class="font-sans font-medium text-accent">
+      Empresa de desarrollo de software | Ubicada en Godoy Cruz, Mendoza, AR
+    </p>
+    <h1
+      class="font-book tracking-tight text-4xl md:text-5xl xl:text-7xl font-normal max-w-3xl"
+    >
+      Su socio de confianza para aplicaciones web y sitios web
+    </h1>
+    <p class="prose text-lg md:text-xl xl:text-2xl">
+      Software personalizado para acelerar el crecimiento, aumentar la
+      participación de clientes e impulsar los ingresos – todo diseñado
+      exclusivamente para tu negocio.
+    </p>
+    <div
+      class="flex flex-col justify-start items-end sm:items-start sm:flex-row gap-8 w-full"
+    >
+      <BtnLink
+        Icon={WspIcon}
+        target="_blank"
+        href={`https://wa.me/${WSP_NUMBER}?text=${WSP_MESSAGE}`}
+        text="Hablemos"
+      />
+      <a href="/services" class="btn">Descubre nuestros servicios</a>
+    </div>
+  </div>
+  <div class="flex flex-col items-start justify-start gap-6">
+    {
+      customersItems.map(({ testimonial, image }, index) => (
+        <article
+          class={`flex ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} border-2 border-base-content items-center rounded-full p-1 bg-accent-content gap-4 min-w-sm`}
+        >
+          <div class="avatar">
+            <div class="w-16 rounded-full">
+              <img src={image} />
+            </div>
+          </div>
+          <div>
+            <p class="prose px-6">{testimonial}</p>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+</section>
