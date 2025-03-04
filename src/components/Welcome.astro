@@ -28,7 +28,7 @@ const customersItems = [
 >
   <div class="flex flex-col items-start justify-start gap-6">
     <p class="font-sans font-medium text-accent">
-      Empresa de desarrollo de software | Ubicada en Godoy Cruz, Mendoza, AR
+      Empresa de desarrollo de software | Godoy Cruz, Mendoza, AR
     </p>
     <h1
       class="font-book tracking-tight text-4xl md:text-5xl xl:text-7xl font-normal max-w-3xl"
@@ -56,15 +56,17 @@ const customersItems = [
     {
       customersItems.map(({ testimonial, image }, index) => (
         <article
-          class={`flex ${index % 2 === 0 ? "flex-row" : "flex-row-reverse"} border-2 border-base-content items-center rounded-full p-1 bg-accent-content gap-4 min-w-sm`}
+          class={`flex ${index % 2 === 0 ? "flex-row text-start" : "flex-row-reverse text-end"} items-center border-2 border-base-content rounded-full p-1 bg-accent-content gap-2 sm:min-w-sm`}
         >
-          <div class="avatar">
-            <div class="w-16 rounded-full">
-              <img src={image} />
+          <div class="avatar shrink-0">
+            <div class="w-16 rounded-full p-0.5">
+              <img src={image} class="rounded-full" />
             </div>
           </div>
-          <div>
-            <p class="prose px-6">{testimonial}</p>
+          <div class="py-2 pr-4">
+            <p class="prose text-sm leading-tight line-clamp-3 ">
+              {testimonial}
+            </p>
           </div>
         </article>
       ))
