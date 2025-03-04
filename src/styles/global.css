@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 @plugin "daisyui" {
-  themes: nord --default
+  themes: nord --default;
 }
 
 a {
-  @apply text-xl
+  @apply text-xl;
 }
