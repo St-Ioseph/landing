@@ -3,7 +3,7 @@ export const WspIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
     y="0px"
-    className="w-6 h-6 mr-3 fill-gray-400"
+    className="fill-gray-400 mr-3 w-6 h-6"
     viewBox="0,0,256,256"
   >
     <g

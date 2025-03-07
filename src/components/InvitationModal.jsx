@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
+import { useState } from "react";
 
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
@@ -6,15 +7,26 @@ import { IosephLogo } from "../assets/logos/IosephLogo";
 import { useForm } from "react-hook-form";
 
 export const InvitationModal = ({ setIsOpen }) => {
-  const { register, handleSubmit } = useForm({
+  const [submitStatus, setSubmitStatus] = useState({ success: false, message: '' });
+  const [isFormLocked, setIsFormLocked] = useState(false);
+  const { register, handleSubmit, formState: { isSubmitting }, reset } = useForm({
     mode: "onChange",
     defaultValues: {
+      name: "",
       email: "",
     },
   });
 
+  const handleClose = () => {
+    setSubmitStatus({ success: false, message: '' });
+    setIsFormLocked(false);
+    setIsOpen(false);
+    reset();
+  };
+
   const onSubmit = async (data) => {
     try {
+      setSubmitStatus({ success: false, message: '' });
       const response = await fetch("/api/send-email", {
         method: "POST",
         headers: {
@@ -23,9 +35,18 @@ export const InvitationModal = ({ setIsOpen }) => {
         body: JSON.stringify(data),
       });
       const responseData = await response.json();
-      console.log(responseData);
+      
+      if (!response.ok) {
+        throw new Error(responseData.error || 'Error al enviar el correo');
+      }
+      
+      if (responseData.success) {
+        setSubmitStatus({ success: true, message: 'Correo enviado exitosamente' });
+        setIsFormLocked(true);
+        reset();
+      }
     } catch (error) {
-      console.error("Error al enviar el correo: ", error);
+      setSubmitStatus({ success: false, message: error.message });
     }
   };
 
@@ -42,7 +63,7 @@ export const InvitationModal = ({ setIsOpen }) => {
           onClick={() => setIsOpen(false)}
         >
           <div
-            className="z-50 fixed fixed bg-bgDarkTransparentLighter backdrop-blur-xl mx-auto sm:mb-8 px-8 sm:px-16 py-12 main-border-gray-darker sm:rounded-2xl w-full sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] h-screen sm:h-auto"
+            className="z-50 fixed bg-bgDarkTransparentLighter backdrop-blur-xl mx-auto sm:mb-8 px-8 sm:px-16 py-1 sm:py-2 md:py-8 lg:py-12 main-border-gray-darker sm:rounded-2xl w-full sm:w-3/4 md:w-3/5 lg:w-[1000px] xl:w-[1100px] h-screen sm:h-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="relative flex">
@@ -70,39 +91,78 @@ export const InvitationModal = ({ setIsOpen }) => {
                 </ul>
               </div>
               <div className="flex flex-col justify-center items-center pt-24 sm:pt-0 w-full lg:w-1/2">
-                <div className="lg:hidden inline flex justify-start items-center mb-8 pr-6 grow basis-0">
+                <div className="lg:hidden flex justify-start items-center mb-8 pr-6 grow basis-0">
+                
                   <div className="mr-2 text-white text-8xl">
                     <IosephLogo />
                   </div>
-                  <div className="font-['Inter'] font-bold text-white text-3xl">
+                  <div className="font-medium 
+                   text-white text-3xl">
                     Ioseph
                   </div>
                 </div>
 
-                <h3 className="mb-7 font-bold text-primaryText text-2xl text-center leading-snug">
-                  Únete al impulso de la innovación
+                <h3 className="mb-7 font-medium text-primaryText text-2xl text-center leading-snug">
+                  Impulsá tus ingresos
                 </h3>
+                <h4 className="mb-12 font-normal text-secondaryColor text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
+                  Envía tu correo y nosotros te contactamos
+                </h4> 
                 <form
                   onSubmit={handleSubmit(onSubmit)}
-                  className="flex flex-wrap -m-2 w-full"
+                  className={`flex flex-wrap -m-2 w-full ${isFormLocked ? 'pointer-events-none opacity-50' : ''}`}
                 >
                   <div className="mx-auto p-2 w-full sm:w-4/5">
                     <input
-                      className="bg-gray-300 px-4 py-4 border border-gray-300 rounded-lg outline-none focus:ring focus:ring-yellow-100 w-full font-medium text-gray-500 text-center placeholder-gray-500"
-                      {...register("email")}
+                      className="bg-gray-300 px-4 py-4 border border-gray-300 rounded-lg outline-none focus:ring focus:ring-yellow-100 w-full font-medium text-black  text-center placeholder-gray-500"
+                      {...register("name", { required: true })}
                       type="text"
+                      placeholder="Tu nombre"
+                      required
+                    />
+                  </div>
+                  <div className="mx-auto p-2 w-full sm:w-4/5">
+                    <input
+                      className="bg-gray-300 px-4 py-4 border border-gray-300 rounded-lg outline-none focus:ring focus:ring-yellow-100 w-full font-medium text-black text-center placeholder-gray-500"
+                      {...register("email", { required: true })}
+                      type="email"
                       placeholder="Tu dirección de correo electrónico"
+                      required
                     />
                   </div>
                   <div className="mx-auto mt-4 p-2 w-full sm:w-4/5">
                     <button
-                      className="bg-primaryColor hover:bg-hoverColor shadow-4xl px-6 py-4 rounded-xl w-full font-semibold text-primaryText scale-100 hover:scale-100 active:scale-110 transition-transform duration-200 ease-in-out"
+                      className="bg-primaryColor hover:bg-hoverColor disabled:opacity-50 shadow-4xl px-6 py-4 rounded-xl w-full font-bold  text-white scale-100 hover:scale-100 active:scale-110 transition-transform duration-200 ease-in-out"
                       type="submit"
+                      disabled={isSubmitting}
                       aria-label="Únete ahora"
                     >
-                      Enviar
+                      {isSubmitting ? 'Enviando...' : 'Enviar'}
                     </button>
                   </div>
+                  <AnimatePresence>
+                    {submitStatus.message && (
+                      <motion.div
+                        initial={{ opacity: 0, y: -10 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0 }}
+                        className={`relative w-full text-center p-2 rounded-lg mt-4 ${
+                          submitStatus.success ? 'bg-green-500/10 text-green-500' : 'bg-red-500/10 text-red-500'
+                        }`}
+                      >
+                        {submitStatus.message}
+                        {submitStatus.success && (
+                          <button
+                            onClick={handleClose}
+                            className="top-1/2 right-2 absolute hover:opacity-70 p-1 -translate-y-1/2 shine-effect"
+                            aria-label="Cerrar"
+                          >
+                            <CloseIcon className="w-4 h-4" />
+                          </button>
+                        )}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
                 </form>
               </div>
               <div

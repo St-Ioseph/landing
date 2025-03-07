@@ -2,6 +2,7 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
 import dashboard from "../assets/images/dashboard.png";
+import WspButton from "./shared/wsp";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +18,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h2 className="mt-16 sm:mt-32 mb-6 font-bold text-secondaryColor text-xs sm:text-sm">
+          <h2 className="mt-14 sm:mt-20 mb-6 font-normal text-secondaryColor text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl">
           Empresa de Desarrollo de Software. Mendoza, Argentina
           </h2>
         </motion.div>
@@ -26,12 +27,12 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.05 }}
         >
-          <div className="px-8 sm:px-8 md:px-20 lg:px-4 font-bold text-primaryText text-5xl sm:text-6xl lg:text-7xl xl:text-7xl tracking-wide">
+          <div className="px-8 sm:px-8 md:px-20 lg:px-4 font-medium text-primaryText text-4xl sm:text-5xl lg:text-6xl xl:text-7xl tracking-wide">
             <h1>Tu socio de confianza </h1>
           </div>
-          <h1 className="mt-2 sm:mt-2 px-8 sm:px-20 md:px-24 lg:px-24 font-bold text-primaryText text-4xl xl:text-4xl sm:text-6xl lg:text-7xl tracking-wide">
+          <h2 className="mt-2 sm:mt-2 px-8 sm:px-20 md:px-24 lg:px-24 font-medium text-primaryText text-2xl xl:text-4xl sm:text-5xl lg:text-6xl tracking-wide">
           para Aplicaciones Web
-          </h1>
+          </h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -41,18 +42,17 @@ export const Hero = () => {
           <div className="flex sm:flex-row flex-col justify-center gap-2 mt-14 mb-24 sm:mb-40">
             <button
               className="mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0 w-64 sm:w-52 h-12 contained-button"
-              onClick={() => setIsModalOpen(true)}
-              aria-label="Comenzar"
             >
-              Comenzar
+              <a class="text-bgDark2" href="/#features">Comencemos</a>
             </button>
             <button
-              className="flex justify-center items-center bg-bgDark2 hover:bg-bgDark3 border border-primaryColor border-solid rounded-xl w-64 sm:w-52 h-12 font-bold text-primaryText transition cursor-pointer"
+              className="flex justify-center items-center bg-bgDark2 hover:bg-bgDark3 border border-primaryColor border-solid rounded-xl w-64 sm:w-52 h-12 font-medium text-primaryText transition cursor-pointer"
               onClick={() => setIsModalOpen(true)}
-              aria-label="Demo en vivo"
+              aria-label="Correo"
             >
               Contacto
             </button>
+            {/* <WspButton/> */}
           </div>
         </motion.div>
         <motion.div

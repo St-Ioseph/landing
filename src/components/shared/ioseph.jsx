@@ -22,12 +22,12 @@ const IosephLogoTitle = ({ showWeb }) => {
         <div className="mr-2 text-white text-6xl">
           <IosephLogo />
         </div>
-        <div className="font-bold text-white text-2xl">Ioseph</div>
+        <div className="font-medium text-white text-2xl">Ioseph</div>
       </div>
       {showWeb && (
         <div
           onClick={copyToClipboard}
-          className="font-['Inter'] font-bold text-gray-400 hover:text-gray-300 text-xs text-center transition-colors cursor-pointer select-text"
+          className="font-['Inter'] font-normal text-gray-400 hover:text-gray-300 text-xs text-center transition-colors cursor-pointer select-text"
         >
           {url}
         </div>

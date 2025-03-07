@@ -24,7 +24,7 @@ export const Navbar = () => {
         className="z-40 fixed flex flex-col justify-center items-center bg-bgDark1 lg:bg-bgDarkTransparent lg:backdrop-blur-xl w-full h-20"
         aria-label="Navegación principal"
       >
-        <div className="relative flex justify-between items-center w-11/12 2xl:w-[1280px] xl:w-10/12">
+        <div className="relative flex justify-evenly items-center w-11/12 2xl:w-[1280px] xl:w-10/12">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -106,16 +106,18 @@ export const Navbar = () => {
                   className={navItemClassName}
                   onClick={() => setIsModalOpen(true)}
                 >
-                  Contacto
+                  Dejanos tu correo
                 </button>
                 <a
-                  className="flex justify-center items-center pt-2 pr-8 pb-2 pl-6 outlined-button"
-                  href="https://wa.me/+5492613337751?text=Hola, me gustaría que agendáramos una reunión, mi nombre es ."
+                  className={navItemClassName}
+                  href="https://wa.me/+5492613337751?text=Hola, mi nombre es "
                   target="_blank"
+                  aria-label="numero telefónico"
                 >
-                <WspIcon />
-                <span className="pt-px">Hablemos</span>
+                  Hablemos por WhatsApp
                 </a>
+
+
               </div>
             </motion.div>
           )}
