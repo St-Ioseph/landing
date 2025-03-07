@@ -34,33 +34,33 @@ const footerData = [
 export const Footer = () => {
   return (
     <footer
-      className="flex flex-col sm:flex-row gap-6 justify-around items-center pt-10  lg:pt-20 lg:pb-16 bg-bgDark1 radius-for-skewed "
+      className="flex sm:flex-row flex-col justify-around items-center gap-6 bg-bgDark1 pt-10 lg:pt-20 lg:pb-16 radius-for-skewed"
       aria-label="Pie de página del sitio"
     >
       <div>
         <WspButton />
       </div>
-      <div className="flex flex-col justify-center items-center sm:flex-row gap-8">
+      <div className="flex sm:flex-row flex-col justify-center items-center gap-8">
         <IosephLogoTitle  showWeb/>
       </div>
 
-      <div className="flex flex-row justify-center items-center gap-6 ">
+      <div className="flex flex-row justify-center items-center gap-6">
         <a
-          className="inline-block w-10 h-10 p-2 pt-[0.55rem] outlined-button"
+          className="inline-block p-2 pt-[0.55rem] outlined-button w-10 h-10"
           href="#"
           aria-label="Facebook"
         >
           <FacebookIcon />
         </a>
         <a
-          className="inline-block w-10  h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
+          className="inline-block p-2 pt-[0.55rem] pl-[0.55rem] outlined-button w-10 h-10"
           href="#"
           aria-label="Twitter"
         >
           <TwitterIcon />
         </a>
         <a
-          className="inline-block w-10  h-10 p-2 pt-[0.55rem] pl-[0.55rem] outlined-button"
+          className="inline-block p-2 pt-[0.55rem] pl-[0.55rem] outlined-button w-10 h-10"
           href="#"
           aria-label="Instagram"
         >

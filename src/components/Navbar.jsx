@@ -21,10 +21,10 @@ export const Navbar = () => {
   return (
     <>
       <nav
-        className="bg-bgDark1 w-full h-20 fixed z-40 flex flex-col justify-center items-center lg:bg-bgDarkTransparent lg:backdrop-blur-xl"
+        className="z-40 fixed flex flex-col justify-center items-center bg-bgDark1 lg:bg-bgDarkTransparent lg:backdrop-blur-xl w-full h-20"
         aria-label="Navegación principal"
       >
-        <div className="2xl:w-[1280px] xl:w-10/12 w-11/12 flex justify-between items-center relative">
+        <div className="relative flex justify-between items-center w-11/12 2xl:w-[1280px] xl:w-10/12">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -41,7 +41,7 @@ export const Navbar = () => {
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
           >
-            <div className="h-full hidden pb-2 pl-12 lg:flex">
+            <div className="hidden lg:flex pb-2 pl-12 h-full">
               {navbarLinks.map(({ href, label, ariaLabel }) => (
                 <a
                   className={navItemClassName}
@@ -66,17 +66,17 @@ export const Navbar = () => {
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
           >
-            <div className="hidden basis-0 grow  lg:flex justify-center items-center">
+            <div className="hidden lg:flex justify-center items-center basis-0 grow">
               <WspButton />
             </div>
           </motion.div>
           <div
-            className="flex flex-col px-2 py-3 rounded-md border border-gray-600 border-solid cursor-pointer hover:bg-bgDark2 lg:hidden"
+            className="lg:hidden flex flex-col hover:bg-bgDark2 px-2 py-3 border border-gray-600 border-solid rounded-md cursor-pointer"
             onClick={() => setIsOpen(!isOpen)}
           >
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500  mb-1"></div>
-            <div className="w-5 h-0.5 bg-gray-500 "></div>
+            <div className="bg-gray-500 mb-1 w-5 h-0.5"></div>
+            <div className="bg-gray-500 mb-1 w-5 h-0.5"></div>
+            <div className="bg-gray-500 w-5 h-0.5"></div>
           </div>
         </div>
         {/* MOBILE NAVBAR */}
@@ -89,7 +89,7 @@ export const Navbar = () => {
               exit={{ opacity: 0 }}
             >
               <div
-                className="bg-bgDark1 border-bgDark3 w-full absolute left-0 top-4 z-50 flex flex-col items-center gap-10 pt-10 pb-10 mt-16 border-y border-solid lg:hidden"
+                className="lg:hidden top-4 left-0 z-50 absolute flex flex-col items-center gap-10 bg-bgDark1 mt-16 pt-10 pb-10 border-y border-bgDark3 border-solid w-full"
               >
                 {navbarLinks.map(({ label, href, ariaLabel }) => (
                   <a
@@ -109,7 +109,7 @@ export const Navbar = () => {
                   Contacto
                 </button>
                 <a
-                  className="outlined-button flex justify-center items-center pt-2 pr-8 pb-2 pl-6"
+                  className="flex justify-center items-center pt-2 pr-8 pb-2 pl-6 outlined-button"
                   href="https://wa.me/+5492613337751?text=Hola, me gustaría que agendáramos una reunión, mi nombre es ."
                   target="_blank"
                 >

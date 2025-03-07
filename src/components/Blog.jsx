@@ -24,36 +24,36 @@ const blogData = [
 ];
 
 export const Blog = () => (
-  <section className="w-screen flex justify-center bg-bgDark2 relative ">
-    <div className="absolute -top-16" id="blog" />
-    <div className="pb-0 pt-4 bg-bgDark2 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px]  ">
+  <section className="relative flex justify-center bg-bgDark2 w-screen">
+    <div className="-top-16 absolute" id="blog" />
+    <div className="bg-bgDark2 pt-4 pb-0 lg:w-[1000px] 2xl:w-[1200px] xl:w-[1150px]">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        <div className="container px-4 mb-20">
-          <div className="max-w-2xl text-center lg:text-left mb-16 mx-auto lg:ml-0 lg:mr-0">
+        <div className="mb-20 px-4 container">
+          <div className="mx-auto lg:mr-0 mb-16 lg:ml-0 max-w-2xl lg:text-left text-center">
             <span className="block-subtitle">Nuestro Blog</span>
-            <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText">
+            <h2 className="mt-6 mb-6 font-heading font-bold text-primaryText text-4xl lg:text-5xl">
               Últimas Ideas
             </h2>
             <p className="mb-6 text-secondaryText">
               Mantenete actualizado con las últimas tendencias e ideas en nuestra industria.
             </p>
           </div>
-          <div className="flex 2xl:w-[1200px] lg:w-[1000px] xl:w-[1150px] flex-wrap -mx-4 items-start h-auto sm:h-[30rem] lg:h-[31rem]  xl:h-[35rem]">
-            <div className="flex sm:hidden lg:flex w-11/12 mx-auto sm:ml-0 sm:mr-0 lg:w-1/2 xl:w-3/5 px-4 mb-8 lg:mb-0  h-full">
+          <div className="flex flex-wrap items-start -mx-4 lg:w-[1000px] 2xl:w-[1200px] xl:w-[1150px] h-auto sm:h-[30rem] lg:h-[31rem] xl:h-[35rem]">
+            <div className="sm:hidden flex lg:flex mx-auto sm:mr-0 mb-8 lg:mb-0 sm:ml-0 px-4 w-11/12 lg:w-1/2 xl:w-3/5 h-full">
               <a href="/blog/article">
-                <div className="p-6 sm:p-10 bg-bgDark3 rounded-3xl h-full hover:bg-bgDark3Hover transition cursor-pointer">
+                <div className="bg-bgDark3 hover:bg-bgDark3Hover p-6 sm:p-10 rounded-3xl h-full transition cursor-pointer">
                   <img
                     src={blogData[0].image}
                     alt={blogData[0].title}
-                    className="rounded-3xl mb-6  w-full"
+                    className="mb-6 rounded-3xl w-full"
                     aria-label={blogData[0].title}
                   />
-                  <h3 className="mb-4 text-2xl font-bold font-heading text-primaryText">
+                  <h3 className="mb-4 font-heading font-bold text-primaryText text-2xl">
                     {blogData[0].title}
                   </h3>
                   <p className="text-secondaryText leading-loose">
@@ -62,16 +62,15 @@ export const Blog = () => (
                 </div>
               </a>
             </div>
-            <div className="hidden sm:flex mx-auto lg:ml-0 lg:mr-0 w-11/12 sm:w-4/5 lg:w-1/2 xl:w-2/5 px-4  flex-col justify-between h-full">
+            <div className="hidden sm:flex flex-col justify-between mx-auto lg:mr-0 lg:ml-0 px-4 w-11/12 sm:w-4/5 lg:w-1/2 xl:w-2/5 h-full">
               {blogData.slice(1).map((post, index) => (
                 <a
                   href="/blog/article"
                   key={`${post.title}-${index}`}
-                  className=" flex  gap-4 p-10 bg-bgDark3 rounded-3xl  min-h-1/2 h-1/2 max-h-[47%]
-                  hover:bg-bgDark3Hover transition cursor-pointer"
+                  className="flex gap-4 bg-bgDark3 hover:bg-bgDark3Hover p-10 rounded-3xl h-1/2 min-h-1/2 max-h-[47%] transition cursor-pointer"
                 >
                   <div className="pt-2">
-                    <h3 className="mb-4 text-xl font-bold font-heading text-primaryText">
+                    <h3 className="mb-4 font-heading font-bold text-primaryText text-xl">
                       {post.title}
                     </h3>
                     <p className="text-secondaryText leading-loose">
@@ -81,7 +80,7 @@ export const Blog = () => (
                   <img
                     src={post.image}
                     alt={post.title}
-                    className="rounded-3xl mb-6 w-[9rem] h-[9rem] lg:w-auto lg:h-auto xl:w-full"
+                    className="mb-6 rounded-3xl w-[9rem] lg:w-auto xl:w-full h-[9rem] lg:h-auto"
                     aria-label={post.title}
                   />
                 </a>

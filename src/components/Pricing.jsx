@@ -21,33 +21,33 @@ export const Pricing = () => {
   };
 
   return (
-    <section className="w-screen flex justify-center bg-bgDark2 relative">
-      <div className="absolute -top-16" id="pricing" />
-      <div className="pb-20 pt-12 bg-bgDark2  2xl:w-[1150px] lg:w-[1050px]  md:w-4/5 ">
+    <section className="relative flex justify-center bg-bgDark2 w-screen">
+      <div className="-top-16 absolute" id="pricing" />
+      <div className="bg-bgDark2 pt-12 pb-20 md:w-4/5 lg:w-[1050px] 2xl:w-[1150px]">
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="container mx-auto px-4">
-            <div className="max-w-2xl mx-auto text-center mb-16">
+          <div className="mx-auto px-4 container">
+            <div className="mx-auto mb-16 max-w-2xl text-center">
               <span className="block-subtitle">Encuentra Tu Ajuste Perfecto</span>
-              <h2 className="mt-6 mb-6 text-4xl lg:text-5xl font-bold font-heading text-primaryText">
+              <h2 className="mt-6 mb-6 font-heading font-bold text-primaryText text-4xl lg:text-5xl">
                 Elige tu mejor plan
               </h2>
               <p className="mb-6 text-secondaryText">
                 Selecciona el plan que se adapte a tus necesidades y benefíciate de nuestras herramientas de análisis.
               </p>
-              <label className="mx-auto bg-bgDark3 relative flex justify-between items-center group text-xl w-44 h-12 rounded-lg pr-36 pl-1 cursor-pointer">
+              <label className="group relative flex justify-between items-center bg-bgDark3 mx-auto pr-36 pl-1 rounded-lg w-44 h-12 text-xl cursor-pointer">
                 <input
                   type="checkbox"
                   className="peer appearance-none"
                   checked={!isMonthly}
                   onChange={handleChange}
                 />
-                <span className="h-8 w-[5.5rem] flex items-center pr-2 bg-bgDark3 after:rounded-lg duration-300 ease-in-out  after:w-[30rem] after:h-10  after:bg-primaryColor   after:shadow-md after:duration-300 peer-checked:after:translate-x-[5.5rem] cursor-pointer"></span>
-                <div className="flex absolute text-primaryText text-sm font-bold">
+                <span className="flex items-center bg-bgDark3 after:bg-primaryColor after:shadow-md pr-2 after:rounded-lg w-[5.5rem] after:w-[30rem] h-8 after:h-10 peer-checked:after:translate-x-[5.5rem] duration-300 after:duration-300 ease-in-out cursor-pointer"></span>
+                <div className="absolute flex font-bold text-primaryText text-sm">
                   <div
                     className={
                       isMonthly ? "mr-9 ml-3" : "mr-9 ml-3 text-gray-400"
@@ -59,33 +59,33 @@ export const Pricing = () => {
                 </div>
               </label>
             </div>
-            <div className="flex flex-wrap flex-col lg:flex-row -mx-4 items-center mt-20">
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="p-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
+            <div className="flex lg:flex-row flex-col flex-wrap items-center -mx-4 mt-20">
+              <div className="mb-8 lg:mb-0 px-4 w-[350px] sm:w-[380px] lg:w-1/3">
+                <div className="bg-bgDark3 p-8 rounded-3xl">
+                  <h3 className="mb-2 font-heading font-bold text-primaryText text-xl text-left">
                     Principiante
                   </h3>
                   <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
+                    <div className="mt-4 mr-2 font-bold text-primaryText text-4xl sm:text-5xl text-left">
                       $0
                     </div>
                     <div className="text-gray-500">
                       {isMonthly ? "/ mes" : "/ año"}
                     </div>
                   </div>
-                  <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
+                  <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 text-left leading-loose">
                     La forma perfecta de empezar y familiarizarte con nuestras herramientas.
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
                     {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
+                      <li className="flex mb-4" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
                       </li>
                     ))}
                   </ul>
                   <button
-                    className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
+                    className="inline-block mt-16 px-4 py-2 rounded-xl rounded-t-xl w-full font-bold text-center leading-loose contained-button"
                     onClick={() => setIsModalOpen(true)}
                     aria-label="Comienza"
                   >
@@ -93,32 +93,32 @@ export const Pricing = () => {
                   </button>
                 </div>
               </div>
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="px-8 py-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 2xl:mb-4 text-2xl font-bold font-heading text-primaryText text-left">
+              <div className="mb-8 lg:mb-0 px-4 w-[350px] sm:w-[380px] lg:w-1/3">
+                <div className="bg-bgDark3 px-8 py-8 rounded-3xl">
+                  <h3 className="mb-2 2xl:mb-4 font-heading font-bold text-primaryText text-2xl text-left">
                     Estándar
                   </h3>
                   <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
+                    <div className="mt-4 mr-2 font-bold text-primaryText text-4xl sm:text-5xl text-left">
                       {isMonthly ? "$19" : "$180"}
                     </div>
                     <div className="text-gray-500">
                       {isMonthly ? "/ mes" : "/ año"}
                     </div>
                   </div>
-                  <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 leading-loose text-left">
+                  <p className="mt-8 mb-8 2xl:mb-12 text-gray-500 text-left leading-loose">
                     Desbloquea más características y eleva tu análisis de datos.
                   </p>
                   <ul className="mb-14 text-primaryText">
                     {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
+                      <li className="flex mb-4" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
                       </li>
                     ))}
                   </ul>
                   <button
-                    className="inline-block text-center py-2 px-4 w-full contained-button leading-loose transition duration-200 mt-20"
+                    className="inline-block mt-20 px-4 py-2 w-full text-center leading-loose transition duration-200 contained-button"
                     onClick={() => setIsModalOpen(true)}
                     aria-label="Comienza"
                   >
@@ -126,32 +126,32 @@ export const Pricing = () => {
                   </button>
                 </div>
               </div>
-              <div className="w-[350px] sm:w-[380px] lg:w-1/3 px-4 mb-8 lg:mb-0">
-                <div className="p-8 bg-bgDark3 rounded-3xl">
-                  <h3 className="mb-2 text-xl font-bold font-heading text-primaryText text-left">
+              <div className="mb-8 lg:mb-0 px-4 w-[350px] sm:w-[380px] lg:w-1/3">
+                <div className="bg-bgDark3 p-8 rounded-3xl">
+                  <h3 className="mb-2 font-heading font-bold text-primaryText text-xl text-left">
                     Premium
                   </h3>
                   <div className="flex justify-start items-end">
-                    <div className="text-4xl sm:text-5xl font-bold text-primaryText text-left mt-4 mr-2">
+                    <div className="mt-4 mr-2 font-bold text-primaryText text-4xl sm:text-5xl text-left">
                       {isMonthly ? "$36" : "$390"}
                     </div>
                     <div className="text-gray-500">
                       {isMonthly ? "/ mes" : "/ año"}
                     </div>
                   </div>
-                  <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 leading-loose text-left">
+                  <p className="mt-4 mb-6 2xl:mb-10 text-gray-500 text-left leading-loose">
                     Experimenta el poder total de nuestra plataforma de análisis
                   </p>
                   <ul className="mb-2 2xl:mb-6 text-primaryText">
                     {pricingData.map((text, index) => (
-                      <li className="mb-4 flex" key={`${text}-${index}`}>
+                      <li className="flex mb-4" key={`${text}-${index}`}>
                         <CheckArrowIcon />
                         <span>{text}</span>
                       </li>
                     ))}
                   </ul>
                   <button
-                    className="inline-block text-center py-2 px-4 w-full rounded-xl rounded-t-xl contained-button font-bold leading-loose mt-16"
+                    className="inline-block mt-16 px-4 py-2 rounded-xl rounded-t-xl w-full font-bold text-center leading-loose contained-button"
                     onClick={() => setIsModalOpen(true)}
                     aria-label="Comienza"
                   >

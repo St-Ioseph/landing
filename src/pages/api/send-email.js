@@ -1,8 +1,8 @@
 import { sendEmail } from "../../lib/nodemailer";
 
-export const prerender = false; 
+export const prerender = false;
 
-export async function post({ request }){
+export async function post({ request }) {
   try {
     const { email } = await request.json();
 

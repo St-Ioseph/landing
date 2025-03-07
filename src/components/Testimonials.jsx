@@ -30,31 +30,31 @@ const testimonialsData = [
 ];
 
 export const Testimonials = () => (
-  <section className="w-full flex justify-center pt-16 mb-16 lg:mb-32 bg-bgDark2 relative">
-    <div className="absolute -top-16" id="feedback" />
-    <div className="flex flex-col w-full lg:w-[1150px] justify-center">
+  <section className="relative flex justify-center bg-bgDark2 mb-16 lg:mb-32 pt-16 w-full">
+    <div className="-top-16 absolute" id="feedback" />
+    <div className="flex flex-col justify-center w-full lg:w-[1150px]">
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.4, delay: 0.3 }}
       >
-        <div className="block-subtitle text-center mb-6">Testimonios</div>
-        <div className="block-big-title text-center mb-20 px-8 sm:px-24 md:px-48">
+        <div className="block-subtitle mb-6 text-center">Testimonios</div>
+        <div className="block-big-title mb-20 px-8 sm:px-24 md:px-48 text-center">
           Recomendaciones y agradecimientos de nuestros clientes
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0 items-center">
+        <div className="flex lg:flex-row flex-col items-center gap-8 lg:gap-5 xl:gap-10 px-6 xl:px-0">
           {testimonialsData.map((testimonial, index) => (
             <div
-              className="w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3 main-border-gray-darker rounded-xl bg-bgDark3 flex flex-col px-6 py-4"
+              className="flex flex-col bg-bgDark3 px-6 py-4 main-border-gray-darker rounded-xl w-11/12 sm:w-4/5 md:w-[560px] lg:w-1/3"
               key={`${testimonial.customerName}-${index}`}
             >
               <div className="flex mb-2">
                 <QuoteIcon />
               </div>
               <div className="content-text-white">"{testimonial.content}"</div>
-              <div className="flex mt-4 mb-2 xl:mt-8 xl:mb-4">
+              <div className="flex mt-4 xl:mt-8 mb-2 xl:mb-4">
                 <div>
                   <img
                     src={testimonial.image.src}
@@ -65,7 +65,7 @@ export const Testimonials = () => (
                   />
                 </div>
                 <div className="flex flex-col ml-4">
-                  <div className="content-text-white font-medium">
+                  <div className="font-medium content-text-white">
                     {testimonial.customerName}
                   </div>
                   <div className="content-text-gray">

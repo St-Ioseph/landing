@@ -19,15 +19,15 @@ const IosephLogoTitle = ({ showWeb }) => {
   return (
     <div className="flex flex-col justify-center items-center gap-4">
       <div className="flex justify-center items-center">
-        <div className="mr-2 text-6xl text-white">
+        <div className="mr-2 text-white text-6xl">
           <IosephLogo />
         </div>
-        <div className="text-white font-bold text-2xl">Ioseph</div>
+        <div className="font-bold text-white text-2xl">Ioseph</div>
       </div>
       {showWeb && (
         <div
           onClick={copyToClipboard}
-          className="text-center text-gray-400 font-['Inter'] font-bold text-xs select-text cursor-pointer hover:text-gray-300 transition-colors"
+          className="font-['Inter'] font-bold text-gray-400 hover:text-gray-300 text-xs text-center transition-colors cursor-pointer select-text"
         >
           {url}
         </div>

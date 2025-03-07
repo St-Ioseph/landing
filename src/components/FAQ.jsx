@@ -25,23 +25,23 @@ const FAQData = [
 ];
 
 export const FAQ = () => (
-  <section className="relative -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 bg-blueGray-50 overflow-hidden">
-    <div className="absolute -top-10" id="FAQ" />
+  <section className="relative bg-blueGray-50 -mt-8 sm:mt-0 pt-12 sm:pt-16 pb-16 overflow-hidden">
+    <div className="-top-10 absolute" id="FAQ" />
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.5, delay: 0.2 }}
     >
-      <div className="relative z-10 container px-2 sm:px-8 lg:px-4 mx-auto w-11/12 sm:w-full">
-        <div className="md:max-w-4xl mx-auto">
-          <p className="mb-7 block-subtitle text-center">¿Tienes alguna pregunta?</p>
-          <h2 className="mb-16 block-big-title text-center">
+      <div className="z-10 relative mx-auto px-2 sm:px-8 lg:px-4 w-11/12 sm:w-full container">
+        <div className="mx-auto md:max-w-4xl">
+          <p className="block-subtitle mb-7 text-center">¿Tienes alguna pregunta?</p>
+          <h2 className="block-big-title mb-16 text-center">
             Preguntas Frecuentes
           </h2>
-          <div className="mb-11 flex flex-wrap -m-1">
+          <div className="flex flex-wrap -m-1 mb-11">
             {FAQData.map((item, index) => (
-              <div className="w-full p-1" key={`${item.question}-${index}`}>
+              <div className="p-1 w-full" key={`${item.question}-${index}`}>
                 <FAQBox
                   title={item.question}
                   content={item.answer}
@@ -62,11 +62,11 @@ const FAQBox = ({ defaultOpen, title, content }) => {
 
   return (
     <div
-      className="pt-2 sm:pt-6 pb-2 px-3 sm:px-8  rounded-3xl bg-bgDark3 main-border-gray-darker mb-4 relative hover:bg-bgDark3Hover cursor-pointer transition"
+      className="relative bg-bgDark3 hover:bg-bgDark3Hover mb-4 px-3 sm:px-8 pt-2 sm:pt-6 pb-2 main-border-gray-darker rounded-3xl transition cursor-pointer"
       onClick={() => setIsOpen(!isOpen)}
     >
-      <div className="flex flex-col p-2  justify-center items-start">
-        <h3 className=" content-title pt-3 sm:pt-0 pr-8 sm:pr-0">{title}</h3>
+      <div className="flex flex-col justify-center items-start p-2">
+        <h3 className="pt-3 sm:pt-0 pr-8 sm:pr-0 content-title">{title}</h3>
         <p
           className={`text-secondaryText pt-4 transition-height duration-300 overflow-hidden ${
             isOpen ? "max-h-96" : "max-h-0"
@@ -75,7 +75,7 @@ const FAQBox = ({ defaultOpen, title, content }) => {
           {content}
         </p>
       </div>
-      <div className="absolute top-6 right-4 sm:top-8 sm:right-8">
+      <div className="top-6 sm:top-8 right-4 sm:right-8 absolute">
         <svg
           width="28px"
           height="30px"

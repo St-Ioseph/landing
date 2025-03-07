@@ -1,16 +1,16 @@
 /* Typography */
 
 .block-title {
-  @apply text-primaryText text-3xl font-bold tracking-normal;
+  @apply font-bold text-primaryText text-3xl tracking-normal;
 }
 .block-big-title {
-  @apply text-primaryText text-4xl xl:text-5xl font-bold tracking-normal;
+  @apply font-bold text-primaryText text-4xl xl:text-5xl tracking-normal;
 }
 .block-subtitle {
-  @apply text-xs text-secondaryColor  tracking-wider font-bold uppercase;
+  @apply font-bold text-secondaryColor text-xs uppercase tracking-wider;
 }
 .content-title {
-  @apply text-primaryText text-lg font-bold tracking-normal;
+  @apply font-bold text-primaryText text-lg tracking-normal;
 }
 .content-text-white {
   @apply text-primaryText text-base leading-relaxed;
@@ -22,19 +22,19 @@
 /* Borders */
 
 .main-border-gray {
-  @apply border border-solid border-mainBorder;
+  @apply border border-mainBorder border-solid;
 }
 .main-border-gray-darker {
-  @apply border border-solid border-mainBorderDarker;
+  @apply border border-mainBorderDarker border-solid;
 }
 
 /* Buttons */
 
 .contained-button {
-  @apply rounded-lg font-bold bg-primaryColor text-primaryText flex justify-center items-center hover:bg-hoverColor cursor-pointer transition duration-300;
+  @apply flex justify-center items-center bg-primaryColor hover:bg-hoverColor rounded-lg font-bold text-primaryText transition duration-300 cursor-pointer;
 }
 .outlined-button {
-  @apply text-primaryText main-border-gray rounded-xl bg-bgDark2 hover:bg-bgDark3  border-gray-700 text-sm;
+  @apply bg-bgDark2 hover:bg-bgDark3 border-gray-700 main-border-gray rounded-xl text-primaryText text-sm;
 }
 
 /* Preventing FOUC */
