@@ -41,3 +41,24 @@
 @font-face {
   font-display: var(--fontsource-Inter-font-display, optional);
 }
+
+/* Estilos para navegadores basados en WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 12px; /* Ancho de la barra de desplazamiento */
+  height: 12px; /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-track {
+  background: #f2f2f2a1; /* Color de fondo de la pista */
+  border-radius: 0px; /* Bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333; /* Color del "thumb" (la parte que se mueve) */
+  border-radius: 0px; /* Bordes redondeados */
+  border: 3px solid #333; /* Borde alrededor del thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #444; /* Color del thumb al pasar el mouse */
+}
