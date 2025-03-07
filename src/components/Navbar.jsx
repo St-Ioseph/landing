@@ -1,20 +1,18 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { InvitationModal } from "./InvitationModal";
-import { IosephLogo } from "../assets/logos/IosephLogo";
 import { WspIcon } from "../assets/icons/WspIcon";
+import WspButton from "./shared/wsp";
+import IosephLogoTitle from "./shared/ioseph";
 
 const navItemClassName =
-  "text-white lg:text-base text-2xl  leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2";
+  "text-white lg:text-lg text-2xl  leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2";
 const navbarLinks = [
   {
     label: "¿Qué hacemos?",
     href: "/#features",
     ariaLabel: "Características",
-  },
-  // { label: "Precios", href: "/#pricing", ariaLabel: "Precios" },
-  // { label: "Comentarios", href: "/#feedback", ariaLabel: "Comentarios" },
-  // { label: "FAQ", href: "/#FAQ", ariaLabel: "FAQ" },
+  }
 ];
 export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,14 +32,7 @@ export const Navbar = () => {
             exit={{ opacity: 0 }}
           >
             <a href="/#home" aria-label="Inicio">
-              <div className="flex basis-0 grow justify-start items-center">
-                <div className="mr-2 text-6xl text-white">
-                  <IosephLogo />
-                </div>
-                <div className="text-white font-['Inter'] font-bold text-xl">
-                  Ioseph
-                </div>
-              </div>
+              <IosephLogoTitle />
             </a>
           </motion.div>
           <motion.div
@@ -75,16 +66,8 @@ export const Navbar = () => {
             transition={{ duration: 0.3 }}
             exit={{ opacity: 0 }}
           >
-            <div className="hidden basis-0 grow justify-end lg:flex">
-              <a
-                className="main-border-gray flex pt-2 pr-8 pb-2 pl-6 text-sm text-white bg-green-600 rounded-xl hover:bg-bgDark3"
-                href="https://wa.me/+5492613337751?text=Hola, mi nombre es "
-                target="_blank"
-                aria-label="numero telefónico"
-              >
-                <WspIcon />
-                <span className="pt-px">Hablemos...</span>
-              </a>
+            <div className="hidden basis-0 grow  lg:flex justify-center items-center">
+              <WspButton />
             </div>
           </motion.div>
           <div
@@ -126,12 +109,12 @@ export const Navbar = () => {
                   Contacto
                 </button>
                 <a
-                  className="outlined-button flex pt-2 pr-8 pb-2 pl-6"
+                  className="outlined-button flex justify-center items-center pt-2 pr-8 pb-2 pl-6"
                   href="https://wa.me/+5492613337751?text=Hola, me gustaría que agendáramos una reunión, mi nombre es ."
                   target="_blank"
                 >
-                  <WspIcon />
-                  WhatsApp
+                <WspIcon />
+                <span className="pt-px">Hablemos</span>
                 </a>
               </div>
             </motion.div>

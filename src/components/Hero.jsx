@@ -17,8 +17,8 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-secondaryColor text-sm sm:text-base  mb-6 sm:mt-32 mt-16 font-bold lg:text-4xl">
-            El crecimiento duele cuando se hace solo
+          <h3 className="text-secondaryColor text-sm sm:text-base  mb-6 sm:mt-32 mt-16 font-bold lg:text-2xl">
+          Empresa de Desarrollo de Software. Godoy Cruz, Mendoza, Argentina
           </h3>
         </motion.div>
         <motion.div
@@ -27,10 +27,10 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.05 }}
         >
           <div className="text-5xl sm:text-6xl lg:text-7xl xl:text-7xl font-bold tracking-wide  text-primaryText  px-8 sm:px-8 md:px-20 lg:px-4">
-            <h1>Digitalizá tu negocio</h1>
+            <h1>Tu socio de confianza </h1>
           </div>
-          <h1 className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-4xl font-bold tracking-wide  text-primaryText  px-8 sm:px-20 md:px-24 lg:px-24">
-          nosotros te ayudamos a crecer
+          <h1 className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-4xl font-bold tracking-wide  text-primaryText px-8 sm:px-20 md:px-24 lg:px-24">
+          para Aplicaciones Web
           </h1>
         </motion.div>
         <motion.div

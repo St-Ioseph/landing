@@ -7,7 +7,7 @@ export const WspIcon = () => (
     viewBox="0,0,256,256"
   >
     <g
-      fill="#9ca3af"
+      fill="#fff"
       fill-rule="evenodd"
       stroke="none"
       stroke-width="1"

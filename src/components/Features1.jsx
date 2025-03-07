@@ -25,7 +25,7 @@ export const Features1 = () => {
                 Soluciones web innovadoras para tu empresa
               </span>
               <h2 className="mt-6 mb-8 text-4xl lg:text-5xl block-big-title">
-                Impulsá tu negocio con tecnología a medida
+                Impulsamos tu negocio con tecnología a medida
               </h2>
               <p className="mb-10 text-secondaryText leading-loose">
                 Desarrollamos sistemas de gestión y plataformas web
