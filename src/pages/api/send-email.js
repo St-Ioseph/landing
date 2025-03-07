@@ -1,16 +1,18 @@
-import { sendEmail } from "../../lib/mailer";
+import { sendEmail } from "../../lib/nodemailer";
 
-export const POST = async ({ request }) => {
+export const prerender = false; 
+
+export async function post({ request }){
   try {
-    const { to, subject, message } = await request.json();
+    const { email } = await request.json();
 
-    if (!to || !subject || !message) {
+    if (!email) {
       return new Response(JSON.stringify({ error: "Faltan datos" }), {
         status: 400,
       });
     }
 
-    const emailResponse = await sendEmail(to, subject, message);
+    const emailResponse = await sendEmail(email);
 
     return new Response(JSON.stringify(emailResponse), { status: 200 });
   } catch (error) {

@@ -2,6 +2,20 @@ import React from "react";
 import { IosephLogo } from "../../assets/logos/IosephLogo";
 
 const IosephLogoTitle = ({ showWeb }) => {
+  const [url, setUrl] = React.useState("www.ioseph.dev");
+  const copyToClipboard = async () => {
+    console.log("Copiando...");
+    try {
+      await navigator.clipboard.writeText(url);
+      setUrl("¡Copiado!");
+      setTimeout(() => {
+        setUrl("www.ioseph.dev");
+      }, 2000);
+    } catch (error) {
+      console.error("Error al copiar la URL: ", error);
+    }
+  };
+
   return (
     <div className="flex flex-col justify-center items-center gap-4">
       <div className="flex justify-center items-center">
@@ -10,10 +24,12 @@ const IosephLogoTitle = ({ showWeb }) => {
         </div>
         <div className="text-white font-bold text-2xl">Ioseph</div>
       </div>
-
       {showWeb && (
-        <div className="text-center text-gray-400 font-['Inter'] font-bold text-xs select-text">
-          www.ioseph.dev
+        <div
+          onClick={copyToClipboard}
+          className="text-center text-gray-400 font-['Inter'] font-bold text-xs select-text cursor-pointer hover:text-gray-300 transition-colors"
+        >
+          {url}
         </div>
       )}
     </div>

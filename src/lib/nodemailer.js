@@ -6,20 +6,20 @@ dotenv.config();
 const transporter = nodemailer.createTransport({
   host: process.env.SMTP_HOST,
   port: Number(process.env.SMTP_PORT),
-  secure: false, // true para 465, false para otros puertos
+  secure: false, 
   auth: {
     user: process.env.SMTP_USER,
     pass: process.env.SMTP_PASS,
   },
 });
 
-export async function sendEmail(to, subject, html) {
+export async function sendEmail(email) {
   try {
     const info = await transporter.sendMail({
       from: `"Tu Nombre" <${process.env.SMTP_USER}>`,
-      to,
-      subject,
-      html,
+      to: email,
+      subject: "Tu correo",
+      html: "<p>Hola, te enviamos un correo de prueba</p>",
     });
 
     console.log("Correo enviado:", info.messageId);

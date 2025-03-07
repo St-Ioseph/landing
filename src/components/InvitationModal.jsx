@@ -13,8 +13,20 @@ export const InvitationModal = ({ setIsOpen }) => {
     },
   });
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = async (data) => {
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+      const responseData = await response.json();
+      console.log(responseData);
+    } catch (error) {
+      console.error("Error al enviar el correo: ", error);
+    }
   };
 
   return (
@@ -84,7 +96,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                   </div>
                   <div className="w-full sm:w-4/5 p-2 mt-4 mx-auto">
                     <button
-                      className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl focus:ring focus:ring-yellow-300 bg-primaryColor hover:bg-hoverColor transition ease-in-out duration-200"
+                      className="py-4 px-6 w-full text-primaryText font-semibold rounded-xl shadow-4xl scale-100 transition-transform duration-200 ease-in-out active:scale-110 hover:scale-100 bg-primaryColor hover:bg-hoverColor "
                       type="submit"
                       aria-label="Únete ahora"
                     >

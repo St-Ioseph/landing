@@ -17,9 +17,9 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h3 className="text-secondaryColor text-sm sm:text-base  mb-6 sm:mt-32 mt-16 font-bold lg:text-2xl">
-          Empresa de Desarrollo de Software. Godoy Cruz, Mendoza, Argentina
-          </h3>
+          <h2 className=" text-secondaryColor text-xs sm:text-sm mb-6 sm:mt-32 mt-16 font-bold ">
+          Empresa de Desarrollo de Software. Mendoza, Argentina
+          </h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
@@ -32,16 +32,6 @@ export const Hero = () => {
           <h1 className="mt-2 sm:mt-2 text-4xl sm:text-6xl lg:text-7xl xl:text-4xl font-bold tracking-wide  text-primaryText px-8 sm:px-20 md:px-24 lg:px-24">
           para Aplicaciones Web
           </h1>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-        >
-          <h2 className="text-secondaryText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
-            {/* ¿Tu negocio está listo para la transformación que realmente suma ganancias? */}
-            {/* Nosotros manejamos la tecnología. */}
-          </h2>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 10 }}
