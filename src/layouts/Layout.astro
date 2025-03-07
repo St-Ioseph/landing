@@ -22,15 +22,36 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <meta
       name="description"
-      content="Dark themed website template built on AstroJS, designed for fictional startup"
+      content="Desarrollamos sistemas de gestión y plataformas web personalizadas con analíticas avanzadas para optimizar tus operaciones empresariales."
     />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://ioseph.dev/" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-    href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap"
-    rel="stylesheet"
-  />
-    <title>{title}</title>
+      href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Open Graph -->
+    <meta property="og:title" content="Ioseph Dev | Tu socio de confianza: soluciones digitales para tu empresa" />
+    <meta
+      property="og:description"
+      content="Desarrollamos sistemas de gestión y plataformas web personalizadas con analíticas avanzadas para optimizar tus operaciones empresariales."
+    />
+    <meta property="og:image" content="https://ioseph.dev/favicon.svg">
+    <meta property="og:url" content="https://ioseph.dev/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_AR" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ioseph Dev | Tu socio de confianza: soluciones digitales para tu empresa" />
+    <meta
+      name="twitter:description"
+      content="Desarrollamos sistemas de gestión y plataformas web personalizadas con analíticas avanzadas para optimizar tus operaciones empresariales."
+    />
+    <meta name="twitter:image" content="https://ioseph.dev/favicon.svg" />
+    <title>Ioseph Dev | Tu socio de confianza: soluciones digitales para tu empresa</title>
   </head>
   <body style="font-family: Lexend Deca, serif; user-select: none;" class="bg-bgDark2">
     <main aria-label="Main content">
@@ -38,7 +59,6 @@ const { title } = Astro.props;
     </main>
     <style is:global>
       html {
-        /* font-family: Inter; */
         background-color: #0c1330;
         overflow-x: hidden;
         scroll-behavior: smooth !important;

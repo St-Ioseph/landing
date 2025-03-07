@@ -7,12 +7,7 @@ import IosephLogoTitle from "./shared/ioseph";
 const footerData = [
   {
     title: "Productos",
-    items: [
-      "Servicios",
-      "Sobre Nosotros",
-      "Noticias y Historias",
-      "Mapa del camino",
-    ],
+    items: ["Servicios", "Sobre Nosotros", "Noticias y Historias", "Mapa del camino"],
   },
   {
     title: "Enlaces Importantes",
@@ -34,14 +29,14 @@ const footerData = [
 export const Footer = () => {
   return (
     <footer
-      className="flex sm:flex-row flex-col justify-around items-center gap-6 bg-bgDark1 pt-10 lg:pt-20 lg:pb-16 radius-for-skewed"
+      className="flex sm:flex-row flex-col justify-around items-center gap-6 bg-bgDark1 py-10 lg:py-20 lg:pb-16 radius-for-skewed"
       aria-label="Pie de página del sitio"
     >
       <div>
         <WspButton />
       </div>
-      <div className="flex sm:flex-row flex-col justify-center items-center gap-8">
-        <IosephLogoTitle  showWeb/>
+      <div className="flex sm:flex-row flex-col justify-center items-center gap-2">
+        <IosephLogoTitle showWeb />
       </div>
 
       <div className="flex flex-row justify-center items-center gap-6">

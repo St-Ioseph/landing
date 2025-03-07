@@ -4,20 +4,38 @@ export const prerender = false;
 
 export async function POST({ request }) {
   try {
-    const { email } = await request.json();
+    const body = await request.json();
+    console.log('Solicitud recibida:', body);
+    const { email, name } = body;
 
-    if (!email) {
-      return new Response(JSON.stringify({ error: "Faltan datos" }), {
-        status: 400,
-      });
+    if (!email || !name) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Faltan campos requeridos" }),
+        {
+          status: 400,
+          headers: { 'Content-Type': 'application/json' }
+        }
+      );
     }
 
-    const emailResponse = await sendEmail(email);
+    const emailResponse = await sendEmail({ email, name });
 
-    return new Response(JSON.stringify(emailResponse), { status: 200 });
+    return new Response(
+      JSON.stringify(emailResponse),
+      {
+        status: emailResponse.success ? 200 : 500,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
+
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Error interno" }), {
-      status: 500,
-    });
+    console.error("Error al enviar correo:", error.message);
+    return new Response(
+      JSON.stringify({ success: false, error: error.message }),
+      {
+        status: 500,
+        headers: { 'Content-Type': 'application/json' }
+      }
+    );
   }
-};
+}

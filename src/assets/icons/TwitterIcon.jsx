@@ -1,13 +1,13 @@
 export const TwitterIcon = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     fill="#fff"
     version="1.1"
     id="Layer_1"
     viewBox="0 0 310 310"
-    xml:space="preserve"
-    className="h-5 w-5"
+    xmlSpace="preserve"
+    className="w-5 h-5"
   >
     <g id="XMLID_801_">
       <path
