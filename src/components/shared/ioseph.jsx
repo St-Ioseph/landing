@@ -12,7 +12,7 @@ const IosephLogoTitle = ({ showWeb }) => {
       </div>
 
       {showWeb && (
-        <div className="text-center text-gray-400 font-['Inter'] font-bold text-xs">
+        <div className="text-center text-gray-400 font-['Inter'] font-bold text-xs select-text">
           www.ioseph.dev
         </div>
       )}
