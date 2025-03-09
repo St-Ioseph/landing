@@ -6,10 +6,5 @@ import netlify from "@astrojs/netlify";
 export default defineConfig({
   integrations: [react(), tailwind()],
   output: "server",
-  adapter: netlify(),
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/sharp"
-    }
-  }
+  adapter: netlify()
 });
