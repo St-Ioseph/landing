@@ -1,0 +1,43 @@
+---
+const results = [
+  {
+    explanation: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+    description: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+    tecnologies: ["React", "Next.js++", "Astro"],
+    image: "websites-thumbnail-small.webp",
+  },
+  {
+    explanation: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+    description: "lorem ipsum dolor sit amet consectetur adipisicing elit",
+    tecnologies: ["React", "Next.js", "Tailwind CSS"],
+    image: "websites-thumbnail-small.webp",
+  },
+];
+---
+
+<section class="flex flex-col items-center justify-center py-16 p-4 gap-8">
+  <h2 class="text-2xl mx-auto">Delivering results for our customers since 2014</h2>
+  <p class="text-xl mx-auto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quia.</p>
+  {
+    results.map(({ explanation, description, tecnologies, image }, index) => (
+      <article
+        class={`${index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"} card flex flex-col sm:flex-row bg-base-100 w-96 shadow-sm border-2 border-base-content`}
+      >
+        <div class="card-body min-h-64 gap-8">
+          <p class="text-xs text-accent">{explanation}</p>
+          <p class="font-sans font-medium text-base">{description}</p>
+          <div class="flex flex-row gap-4">
+            {tecnologies.map((tecnology, index) => (
+              <span class="badge badge-outline badge-secondary">{tecnology}</span>
+            ))}
+          </div>
+        </div>
+        <figure
+          class={`${index % 2 === 0 ? "sm:border-l-2" : "sm:border-r-2 "} max-sm:border-t-2 border-base-content`}
+        >
+          <img src={image} alt="Websites" />
+        </figure>
+      </article>
+    ))
+  }
+</section>
