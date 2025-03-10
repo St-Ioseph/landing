@@ -1,6 +1,6 @@
 import { FacebookIcon } from "../assets/icons/FacebookIcon";
 import { InstagramIcon } from "../assets/icons/InstagramIcon";
-import { TwitterIcon } from "../assets/icons/TwitterIcon";
+import { LinkedInIcon } from "../assets/icons/LinkedInIcon";
 import WspButton from "./shared/wsp";
 import IosephLogoTitle from "./shared/ioseph";
 
@@ -26,6 +26,25 @@ const footerData = [
   },
 ];
 
+
+const FooterItem = [
+  {
+    ariaLabel: "Facebook",
+    icon: <FacebookIcon />,
+    href: "https://www.facebook.com/ioseph.dev/",
+  },
+  {
+    ariaLabel: "LinkedIn",
+    icon: <LinkedInIcon />,
+    href: "https://www.linkedin.com/company/ioseph-dev/",
+  },
+  {
+    ariaLabel: "Instagram",
+    icon: <InstagramIcon />,
+    href: "https://www.instagram.com/ioseph.dev",
+  },
+]
+
 export const Footer = () => {
   return (
     <footer
@@ -40,27 +59,17 @@ export const Footer = () => {
       </div>
 
       <div className="flex flex-row justify-center items-center gap-6">
-        <a
-          className="inline-block p-2 pt-[0.55rem] outlined-button w-10 h-10"
-          href="#"
-          aria-label="Facebook"
-        >
-          <FacebookIcon />
-        </a>
-        <a
-          className="inline-block p-2 pt-[0.55rem] pl-[0.55rem] outlined-button w-10 h-10"
-          href="#"
-          aria-label="Twitter"
-        >
-          <TwitterIcon />
-        </a>
-        <a
-          className="inline-block p-2 pt-[0.55rem] pl-[0.55rem] outlined-button w-10 h-10"
-          href="#"
-          aria-label="Instagram"
-        >
-          <InstagramIcon />
-        </a>
+        {FooterItem.map((item, index) => (
+          <a
+            target="_blank"
+            key={index}
+            className="inline-block p-2 pt-[0.55rem] outlined-button w-10 h-10"
+            href={item.href}
+            aria-label={item.ariaLabel}
+          >
+            {item.icon}
+          </a>
+        ))}
       </div>
     </footer>
   );

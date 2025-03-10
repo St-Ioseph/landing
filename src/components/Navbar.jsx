@@ -4,6 +4,7 @@ import { InvitationModal } from "./InvitationModal";
 import { WspIcon } from "../assets/icons/WspIcon";
 import WspButton from "./shared/wsp";
 import IosephLogoTitle from "./shared/ioseph";
+import { PHONE_NUMBER } from "../config/constants";
 
 const navItemClassName =
   "text-white lg:text-lg text-2xl  leading-6 mr-4 ml-4 2xl:mr-6 2xl:ml-6 cursor-pointer font-normal lg:font-medium hover:scale-110 transition h-full pt-2";
@@ -110,7 +111,7 @@ export const Navbar = () => {
                 </button>
                 <a
                   className={navItemClassName}
-                  href="https://wa.me/+5492613337751?text=Hola, mi nombre es "
+                  href={`https://wa.me/${PHONE_NUMBER}?text=Hola, te escribo desde ioseph.dev. Mi nombre es `}
                   target="_blank"
                   aria-label="numero telefónico"
                 >
