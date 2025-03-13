@@ -55,7 +55,9 @@ export const Footer = () => {
         <WspButton />
       </div>
       <div className="flex sm:flex-row flex-col justify-center items-center gap-2">
-        <IosephLogoTitle showWeb />
+        <div className="scale-75">
+          <IosephLogoTitle showWeb />
+        </div>
       </div>
 
       <div className="flex flex-row justify-center items-center gap-6">
