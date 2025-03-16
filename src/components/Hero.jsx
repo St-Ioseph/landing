@@ -28,7 +28,7 @@ export const Hero = () => {
           transition={{ duration: 0.5, delay: 0.05 }}
         >
           <h2 className="px-8 sm:px-8 md:px-20 lg:px-4 font-medium text-primaryText text-4xl sm:text-5xl lg:text-6xl xl:text-7xl leading-relaxed tracking-wide line">
-            Tu socio de confianza para Aplicaciones Web
+            Somos el brazo tecnológico que tu empresa necesita
           </h2>
           <h2 className="mt-2 sm:mt-2 px-8 sm:px-20 md:px-24 lg:px-24 font-medium text-primaryText text-2xl xl:text-4xl sm:text-5xl lg:text-6xl tracking-wide">
           </h2>

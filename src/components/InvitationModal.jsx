@@ -77,7 +77,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                   Compartí tu correo
                 </h2>
                 <h2 className="font-bold text-secondaryColor text-5xl tracking-normal">
-                  Nosotros te contactamos
+                  Nosotros te contactaremos
                 </h2>
 
                 <ul className="mt-12 mb-6 text-primaryText">
@@ -108,9 +108,6 @@ export const InvitationModal = ({ setIsOpen }) => {
                 <h3 className="mb-7 font-bold text-primaryText text-2xl text-center leading-snug tracking-tight">
                   Unite al impulso de la innovación
                 </h3>
-                <h4 className="mb-12 font-normal text-md text-secondaryColor md:text-md lg:text-lg xl:text-xl">
-                  Dejá tu correo y nosotros te contactamos
-                </h4>
                 <form
                   onSubmit={handleSubmit(onSubmit)}
                   className={`flex flex-wrap -m-2 w-full ${
