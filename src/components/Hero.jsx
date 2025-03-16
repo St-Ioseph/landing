@@ -9,7 +9,7 @@ export const Hero = () => {
 
   return (
     <section
-      className="flex justify-center items-center bg-bgDark1 hero-bg-gradient mb-[28vw] md:mb-[18vw] lg:mb-[10vw] xl:mb-[13vw] 2xl:mb-60 pb-24 sm:pb-32 md:pb-44 lg:pb-0 w-screen"
+      className="flex justify-center items-center bg-bgDark1 hero-bg-gradient w-screen max-lg:pb-[12vw]"
       id="home"
     >
       <div className="flex flex-col justify-center items-center pt-16 md:pt-16 lg:pt-20 w-full md:w-[800px] xl:w-[900px] text-center">
@@ -38,7 +38,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.15 }}
         >
-          <div className="flex sm:flex-row flex-col justify-center gap-2 mt-14 mb-24 sm:mb-40">
+          <div className="flex sm:flex-row flex-col justify-center gap-2 mt-8 mb-12">
             <button
               className="mr-0 sm:mr-4 lg:mr-6 mb-2 sm:mb-0 w-64 sm:w-52 h-12 contained-button"
             >
@@ -54,21 +54,8 @@ export const Hero = () => {
             {/* <WspButton/> */}
           </div>
         </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 10, zIndex: 20 }}
-          animate={{ opacity: 1, y: 0, zIndex: 20 }}
-          transition={{ duration: 0.5, delay: 0.15 }}
-        >
-          <div className="relative flex justify-center w-screen">
-            <img
-              src={dashboard.src}
-              alt="Imagen de dashboard"
-              className="lg:top-6 xl:top-0 z-10 absolute mx-auto hero-dashboard-border-gradient main-border-gray rounded-xl w-4/5 2xl:w-[1000px]"
-            />
-          </div>
-        </motion.div>
         <div className="relative flex justify-center w-screen">
-          <div className="hidden lg:block shape-divider-bottom-1665343298 mt-4 sm:mt-16 md:mt-52">
+          <div className="hidden lg:block shape-divider-bottom-1665343298 mt-4">
             <svg
               data-name="Layer 1"
               xmlns="http://www.w3.org/2000/svg"
