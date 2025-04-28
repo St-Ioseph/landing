@@ -155,7 +155,7 @@ export const InvitationModal = ({ setIsOpen }) => {
                       >
                         {submitStatus.success
                           ? "Correo enviado exitosamente. Pronto te escribiremos."
-                          : "Escribe a ioseph.dev@gmail.com y te responderemos pronto."}
+                          : "Escribe a contact@ioseph.dev y te responderemos pronto."}
                         {submitStatus.success && (
                           <button
                             onClick={handleClose}

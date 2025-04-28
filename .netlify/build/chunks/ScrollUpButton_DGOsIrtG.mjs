@@ -186,7 +186,7 @@ const InvitationModal = ({ setIsOpen }) => {
                             exit: { opacity: 0 },
                             className: `relative w-full text-center p-2 rounded-lg opacity-100 mt-4 ${submitStatus.success ? "bg-green-700 text-white" : "bg-red-500/10 text-red-500"}`,
                             children: [
-                              submitStatus.success ? "Correo enviado exitosamente. Pronto te escribiremos." : "Escribe a ioseph.dev@gmail.com y te responderemos pronto.",
+                              submitStatus.success ? "Correo enviado exitosamente. Pronto te escribiremos." : "Escribe a contact@ioseph.dev y te responderemos pronto.",
                               submitStatus.success && /* @__PURE__ */ jsx(
                                 "button",
                                 {
